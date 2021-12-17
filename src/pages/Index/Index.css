@@ -1,0 +1,59 @@
+.Index{
+    height:100vh;
+    width: 100%;
+    background: var(--securosbg);
+}
+
+.Index-nav{
+    width: 100%;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background: var(--securoshd);
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.Index-nav-wrapper{
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    justify-content: space-between;
+    align-items: inherit;
+}
+
+.Index-nav-p{
+    margin: 0;
+    font-size: 1.7em;
+}
+
+.Index-nav-securosLogo{
+    height: 50px;
+    width: auto;
+}
+
+.Index-form{
+    min-width: 300px;
+    color: var(--securoshd);
+    width: 25%;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    height: fit-content;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: rgba(145, 145, 145, 0.25) 0px 54px 55px, rgba(201, 201, 201, 0.12) 0px -12px 30px, rgba(207, 207, 207, 0.12) 0px 4px 6px, rgba(197, 197, 197, 0.17) 0px 12px 13px, rgba(204, 204, 204, 0.09) 0px -3px 5px;
+}
+
+.Index-form-header-txt{
+    align-self: start;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 10px;
+}

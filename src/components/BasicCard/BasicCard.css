@@ -1,0 +1,38 @@
+.BasicCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  20px;
+    box-sizing: border-box;
+    max-width: 500px;
+    height: 100%;
+    min-width: 200px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    cursor:pointer;
+    background:white;
+}
+
+.BasicCard-left-side{
+    display: flex;
+    align-items: center;
+}
+
+.BasicCard-info{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.BasicCard-info small{
+    color: rgb(167, 167, 167);
+    margin:0;
+}
+
+.BasicCard-info p{
+    color: rgb(92, 171, 245);
+    font-weight: bold;
+    margin:0;
+}

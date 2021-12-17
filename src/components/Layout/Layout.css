@@ -1,0 +1,44 @@
+.Layout-container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: "side-nav header"
+                         "side-nav  main-section"
+                         "side-nav  main-section";
+    grid-template-rows: 64px 1fr;
+    grid-template-columns: 260px 1fr;
+}
+
+.Layout.side-nav-grid-area{
+    grid-area: side-nav;
+    background-color: var(--securosbg);
+}
+
+.Layout.header-grid-area{
+    grid-area: header;
+    background-color: white;
+    
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14);
+    margin-bottom: 10px;
+}
+
+.Layout.main-section-grid-area{
+    grid-area: main-section;
+    padding: 0 30px;
+}
+
+@media (max-width: 940px) {
+    .Layout-container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas: "header header"
+                             "main-section  main-section"
+                             "main-section  main-section";
+        grid-template-rows: 64px 1fr;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+}

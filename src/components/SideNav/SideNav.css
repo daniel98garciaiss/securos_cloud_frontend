@@ -1,0 +1,126 @@
+.SideNav-container{
+    width: 100%;
+    height: 100%;
+    padding: 30px 15px 5px 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: var(--securosbg);
+    transition: all 0.5s ease;
+}
+
+.SideNav-close-icon{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.SideNav-close-icon:hover {
+    animation-name: deleteAnimation;
+    animation-duration: 1s;
+}
+  
+@keyframes deleteAnimation {
+30% {
+    transform: rotate(20deg);
+}
+70% {
+    transform: rotate(-20deg);
+}
+}
+  
+
+.SideNav-container a{
+    width: 100%;
+    color:white;
+    text-decoration: none;
+}
+
+.SideNav-header{
+    align-self: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.Securos-logo-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.SideNav-my-site{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.SideNav-my-site:hover{
+    background: rgba(255, 255, 255, 0.349);
+}
+
+.SideNav-section-tittle{
+    color: rgb(189, 189, 189);
+    width: 100%;
+    margin: 5px 0;
+}
+
+.SideNav-modul{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.SideNav-modul:hover{
+    background-color: rgba(255, 255, 255, 0.281);
+}
+
+.SideNav-left-section{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.SideNav-left-section p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.SideNav-right-section{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 940px) {
+    
+    .SideNav-container{
+        width: 260px;
+        height:100vh;
+        top: 0;
+        left: -260px;
+        position: absolute;
+    }
+
+    .SideNav-container.active{
+        left: 0;
+    }
+
+    .SideNav-close-icon{
+        display: block;
+    }
+}

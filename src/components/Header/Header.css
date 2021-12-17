@@ -1,0 +1,70 @@
+.Header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.Header-user-info-section{
+ display: flex;
+ align-items: center;
+ cursor: pointer;
+ padding: 10px;
+ box-sizing: border-box;
+ border-radius: 8px;
+ margin-right: 5px;
+ position: relative;
+}
+
+.Header-user-info-section:hover{
+    background: rgb(240, 240, 240);
+   }
+
+.Header-user-info-section-h5{
+ margin: 0 10px;
+}
+
+.Header-popUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    bottom: -70px;
+    left:0;
+    z-index: 100;
+    background: white;
+    width: 100%;
+    border-radius:  6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.Header-popUp:hover{
+    background: rgb(240, 240, 240);
+
+}
+
+.Header-popUp-item{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header-burguer-button{
+    display:none;
+    margin-left: 20px;
+}
+
+@media (max-width: 940px) {
+
+    .Header{
+        justify-content: space-between;
+    }
+
+    .Header-burguer-button{
+        display: block;
+    }
+}
