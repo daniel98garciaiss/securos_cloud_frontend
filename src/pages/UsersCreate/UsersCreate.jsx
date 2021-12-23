@@ -10,8 +10,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from "@mui/material/Button";
 
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 
 
  function UsersCreate({ headerName, icon }) {

@@ -5,6 +5,7 @@ import clientReducer from './client/reducer';
 import userReducer from './auth/user/reducer';
 import camerasReducer from './cameras/reducer';
 import generalReducer from './general/reducer';
+import serversReducer from './servers/reducer';
 
 
 export default combineReducers({
@@ -12,5 +13,6 @@ export default combineReducers({
     clientReducer,
     userReducer,
     camerasReducer,
+    serversReducer,
     generalReducer,
 });

@@ -108,6 +108,7 @@ const reducer = (state = initialState, action) => {
                     name: "",
                     lastName: "",
                     nickName: "",
+                    rol:"",
                 },
             };
        

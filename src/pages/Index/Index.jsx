@@ -60,13 +60,16 @@ function Index({ headerName, icon }) {
   useEffect(()=>{
     if(logged){
       if(rol === "superUsuario"){
-        navigate('/modulo-admin');
+        navigate('/super-usuario');
       }else{
         navigate('/panel');
       }
     }
   },[rol])
 
+  if (logged) {
+    return null;
+  }
   return (
     <div className="Index">
       <nav className="Index-nav">

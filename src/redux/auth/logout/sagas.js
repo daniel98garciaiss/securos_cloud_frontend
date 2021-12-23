@@ -1,21 +1,15 @@
+// {llamar a una funcion, agrupar, llamar a acciones de redux, suscribirse a un evento de redux}
 import {call, all, put, takeEvery} from 'redux-saga/effects';
 import {ROUTE_ENDPOINT} from "../../../utils/route";
 import {logoutSuccess, logoutError} from "./actions";
 import {LOGOUT_REQUESTING} from "./constants";
-// import NavigationService from "../../../utils/NavigationService";
 import {clientUnset} from "../../client/actions";
-// import AsyncStorage from '@react-native-community/async-storage';
 import {userResetStatesLogout} from "../user/actions";
 import {deviceDeleteRequesting} from "../device/actions";
-// import {Platform} from "react-native";
-import {handlerAlertModal} from "../../menusModals/actions";
+// import {handlerAlertModal} from "../../menusModals/actions";
 
-const logoutUrl = `${ROUTE_ENDPOINT}/logout`;
+const logoutUrl = `${ROUTE_ENDPOINT}/auth/logout`;
 
-const removeTokenStorage = () => {
-    AsyncStorage.removeItem('@app:ekocampo');
-    NavigationService.navigate('ListProduct');
-};
 
 const logoutApi = (token) => {
     return fetch(`${logoutUrl}`, {
@@ -40,13 +34,11 @@ const logoutApi = (token) => {
 
 function* logoutFlow(action) {
     try {
-        let values = {os: Platform.OS};
         const {token} = action;
         yield call(logoutApi, token);
         yield put(logoutSuccess());
         yield put(clientUnset());
         yield put(userResetStatesLogout());
-        yield put(removeTokenStorage());
     } catch (error) {
         yield put(logoutError(error));
     }

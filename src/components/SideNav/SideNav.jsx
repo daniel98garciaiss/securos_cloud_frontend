@@ -17,7 +17,7 @@ import securosLogo from "../../assets/img/securos_rb_white.png";
 
 
 // ----------------------------------- actions
-import { setSidenav_menu_toggle } from "../../redux/general/action";
+import { setSidenav_menu_toggle } from "../../redux/general/actions";
 
 function SideNav(props) {
 
@@ -55,8 +55,41 @@ function SideNav(props) {
       </Link>
       <br/>
       <h6 className="SideNav-section-tittle">MODULOS</h6>
-
       <div
+        className="SideNav-modul"
+        onClick={() => setModuleOptionServers(!moduleOptionServers)}
+      >
+        <div className="SideNav-left-section">
+          <StorageIcon />
+          <p>Servidores</p>
+        </div>
+        <i className={`SideNav-right-section ${moduleOptionServers && "rotateIcon"}`}>
+          <ArrowRightIcon fontSize="small" />
+        </i>
+      </div>
+      {moduleOptionServers === true && (
+        <>
+          <Link to="/servidores">
+            <div className="SideNav-modul">
+              <div className="SideNav-left-section">
+                  <FiberManualRecordIcon sx={{ fontSize: 10 }} />
+                  <p>ver</p>
+              </div>
+            </div>
+          </Link>
+          <Link to="/servidores/crear">
+            <div className="SideNav-modul">
+              <div className="SideNav-left-section">
+                  <FiberManualRecordIcon sx={{ fontSize: 10 }} />
+                  <p>crear</p>
+              </div>
+            </div>
+          </Link>
+        </>
+      )}
+      </div>
+
+      /* <div
         className="SideNav-modul"
         onClick={() => setModuleOptionCameras(!moduleOptionCameras)}
       >
@@ -88,9 +121,9 @@ function SideNav(props) {
             </div>
           </Link>
         </>
-      )}
+      )} */
 
-      <div
+      /* <div
         className="SideNav-modul"
         onClick={() => setModuleOptionUsers(!moduleOptionUsers)}
       >
@@ -122,39 +155,9 @@ function SideNav(props) {
             </Link>
 
         </>
-      )}
+      )} */
 
 
-<div
-        className="SideNav-modul"
-        onClick={() => setModuleOptionServers(!moduleOptionServers)}
-      >
-        <div className="SideNav-left-section">
-          <StorageIcon />
-          <p>Servidores</p>
-        </div>
-        <i className={`SideNav-right-section ${moduleOptionServers && "rotateIcon"}`}>
-          <ArrowRightIcon fontSize="small" />
-        </i>
-      </div>
-      {moduleOptionServers === true && (
-        <>
-            <div className="SideNav-modul">
-            <div className="SideNav-left-section">
-                <FiberManualRecordIcon sx={{ fontSize: 10 }} />
-                <p>ver</p>
-            </div>
-            </div>
-
-            <div className="SideNav-modul">
-            <div className="SideNav-left-section">
-                <FiberManualRecordIcon sx={{ fontSize: 10 }} />
-                <p>crear</p>
-            </div>
-            </div>
-        </>
-      )}
-    </div>
   );
 }
 

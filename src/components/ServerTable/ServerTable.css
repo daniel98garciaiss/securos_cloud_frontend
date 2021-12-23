@@ -1,0 +1,18 @@
+.ServerTable.table_actions svg {
+    cursor: pointer;
+  }
+.ServerTable.table_actions svg:hover {
+    transform: scale(1.5);
+    animation-name: deleteAnimation;
+    animation-duration: 1s;
+  }
+  
+  @keyframes deleteAnimation {
+    30% {
+      transform: rotate(20deg);
+    }
+    70% {
+      transform: rotate(-20deg);
+    }
+  }
+  
